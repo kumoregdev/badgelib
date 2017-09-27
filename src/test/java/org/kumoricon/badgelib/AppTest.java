@@ -33,6 +33,24 @@ public class AppTest
      */
     public void testApp()
     {
+        /*
+            REQUIREMENTS:
+            Function 1:
+                -Pass an arbitrary number of strings which must automatically fit in the PDF
+            Function 2:
+                -Pass text to be printed vertically on the left or right on the PDF
+                -The text should align perfectly
+         */
+        App a = new App();
+        String[] s = new String[]{""};
+        a.main(s);
+        Runtime rt = Runtime.getRuntime();
+        try {
+            Process pr = rt.exec("xdg-open /tmp/test.pdf");
+        }
+        catch (java.io.IOException e) {
+            assertTrue( false );
+        }
         assertTrue( true );
     }
 }
